@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 //app imports
-import HomeImageLink from './HomeLinkImage';
+import HomeLink from './HomeLink';
 import Searchbar from './Searchbar';
 import Navigation from './Navigation';
 
@@ -15,7 +15,7 @@ export default class Header extends Component {
     render() {
         return (
             <div id="facebook-header">
-                <HomeImageLink />
+                <HomeLink />
                 <Searchbar />
                 <Navigation />
             </div>

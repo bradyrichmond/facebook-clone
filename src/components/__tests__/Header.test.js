@@ -2,16 +2,17 @@ import React, { component } from 'react';
 import { shallow, render } from 'enzyme';
 import ReactDOM from 'react-dom';
 import Header from '../header/Header';
-import HomeLinkImage from '../header/HomeLinkImage'
+import HomeLink from '../header/HomeLink'
+import { MemoryRouter } from 'react-router-dom'
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Header />, div);
+    ReactDOM.render(<MemoryRouter><Header /></MemoryRouter>, div);
     ReactDOM.unmountComponentAtNode(div);
 });
 
 describe('Header tests', () => {
-    let wrapper = render(<Header />);
+    let wrapper = render(<MemoryRouter><Header /></MemoryRouter>);
 
     // Render tests
     {
