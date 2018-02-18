@@ -1,4 +1,10 @@
+//package imports
 import React, { Component } from 'react';
+
+//app imports
+import HomeImageLink from './HomeLinkImage';
+import Searchbar from './Searchbar';
+import Navigation from './Navigation';
 
 export default class Header extends Component {
     constructor(props) {
@@ -8,7 +14,11 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div />
+            <div id="facebook-header">
+                <HomeImageLink />
+                <Searchbar />
+                <Navigation />
+            </div>
         );
     }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class HomeLinkimage extends Component {
+export default class Navigation extends Component {
     constructor(props) {
         super(props);
 
@@ -8,7 +8,7 @@ export default class HomeLinkimage extends Component {
 
     render() {
         return (
-            <div id='bluebar_logo'>
+            <div id='navigation'>
             </div>
         );
     }

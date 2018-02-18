@@ -1,7 +1,8 @@
 import React, { component } from 'react';
-import { shallow } from 'enzyme';
+import { shallow, render } from 'enzyme';
 import ReactDOM from 'react-dom';
 import Header from '../header/Header';
+import HomeLinkImage from '../header/HomeLinkImage'
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
@@ -10,36 +11,20 @@ it('renders without crashing', () => {
 });
 
 describe('Header tests', () => {
-    let wrapper = shallow(<Header />)
+    let wrapper = render(<Header />);
 
     // Render tests
     {
         it('renders a home link', () => {
-
+            expect(wrapper.find('#bluebar_logo').length).toBe(1);
         })
 
         it('renders a search bar', () => {
-
-        })
-
-        it('renders a gravicon', () => {
-
-        })
-
-        it('renders a user name', () => {
-
+            expect(wrapper.find('#searchbar').length).toBe(1);
         })
 
         it('renders standard nav', () => {
-
-        })
-
-        it('renders assistance', () => {
-
-        })
-
-        it('renders menu', () => {
-            
+            expect(wrapper.find('#navigation').length).toBe(1);
         })
     }
 
